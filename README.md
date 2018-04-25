@@ -12,7 +12,7 @@ _Screenshot to come soon_
 
 ### Install
 
-```
+```bash
 $ hyper i hype-title
 ```
 
