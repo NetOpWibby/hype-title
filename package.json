@@ -1,0 +1,15 @@
+{
+  "name": "hype-title",
+  "version": "1.0.0",
+  "description": "Set the title of your tab to the folder you are in",
+  "license": "MIT",
+  "repository": "https://git.inc.sh/NetOperatorWibby/hype-title",
+  "author": "Paul Anthony Webb <paul@inc.sh>",
+  "main": "index.js",
+  "keywords": [
+    "cwd",
+    "hyper",
+    "hyperterm",
+    "title"
+  ]
+}
