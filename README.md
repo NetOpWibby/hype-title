@@ -16,7 +16,7 @@ _Screenshot to come soon_
 $ hyper i hype-title
 ```
 
-Or, you can install `hyper-title` manually by adding it to the plugins list in your `~/.hyper.js` config file.
+Or, you can install `hype-title` manually by adding it to the plugins list in your `~/.hyper.js` config file.
 
 
 
