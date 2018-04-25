@@ -9,4 +9,5 @@
 ### Install
 
 Automatic: `npm i hype-title`
+
 Manual: Add `hype-title` to the plugins list in your `~/.hyper.js` config file
