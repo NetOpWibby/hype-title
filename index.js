@@ -1,4 +1,4 @@
-"use strict";
+/* eslint indent: ["error", 2, { "SwitchCase": 1 }] */ "use strict";
 
 
 
@@ -13,23 +13,23 @@ const { exec } = require("child_process");
 const sessions = {};
 
 const debounce = (func, wait, immediate) => {
-	let timeout;
+  let timeout;
 
-	return function () {
-		const context = this;
-		const args = arguments;
+  return function () {
+    const context = this;
+    const args = arguments;
 
-		const later = function () {
-			timeout = null;
-			if (!immediate) func.apply(context, args);
-		};
+    const later = function () {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
 
-		const callNow = immediate && !timeout;
-		clearTimeout(timeout);
-		timeout = setTimeout(later, wait);
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
 
-		if (callNow) func.apply(context, args);
-	};
+    if (callNow) func.apply(context, args);
+  };
 };
 
 const setTitle = (pid, uid) => {
@@ -42,7 +42,7 @@ const setTitle = (pid, uid) => {
       if (cwd === process.env.USER) cwd = "~";
       else if (cwd === "") cwd = "/";
 
-      store.dispatch({
+      store.dispatch({ // eslint-disable-line
         type: "SESSION_SET_XTERM_TITLE",
         title: cwd,
         uid
@@ -51,13 +51,13 @@ const setTitle = (pid, uid) => {
   });
 };
 
-const debouncedTitle = debounce(setTitle, 10); // 250
+const debouncedTitle = debounce(setTitle, 10);
 
 
 
 //	E X P O R T
 
-exports.middleware = (store) => (next) => (action) => {
+exports.middleware = (store) => (next) => (action) => { // eslint-disable-line
   switch (action.type) {
     case "SESSION_ADD":
       sessions[action.uid] = {
@@ -78,7 +78,7 @@ exports.middleware = (store) => (next) => (action) => {
       break;
     }
 
-		case "SESSION_SET_PROCESS_TITLE": {
+    case "SESSION_SET_PROCESS_TITLE": {
       const session = sessions[action.uid];
       debouncedTitle(session.pid, action.uid);
 
