@@ -6,7 +6,28 @@
 
 It is kind of irritating to see a truncated title, you just need to see the current directory name.
 
-_Screenshot to come soon_
+
+
+### Preview
+
+![](preview.png)
+
+
+
+### Screenshot Details
+
+- Font: Iosevka @ 12pt
+- Plugins:
+  - hyper-statusline
+  - hyper-tabs-enhanced
+  - hyper-working-directory
+  - hypercwd
+  - hyperterm-bold-tab
+  - hyperterm-close-on-left
+  - hyper-hide-title
+  - hype-title
+  - hype-dracula
+- Shell: [zsh](http://ohmyz.sh)
 
 
 
